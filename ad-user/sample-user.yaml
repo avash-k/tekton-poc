@@ -1,0 +1,34 @@
+users:
+    - short_id: summadya.in
+      user_type: service | user
+      email: sumanth.v.m@in.ibm.com
+      ssh_key: "dfkhadskfhkahfkljadhflkjhdsajklfhjklasfhjkljk2k3h12jk43hj23h4jkl2h4"
+      uid:
+      group:
+      groups:
+        - sudo
+        - developer
+      state: absent
+      limit:
+        - linux&jump:
+          creation_type: 
+            - IDM
+        - windows:
+            creation_type: 
+              - AD
+        - AIX:
+      user_roles:
+        - role: PES cloud engineer
+          tools:
+            - tool: instana
+              state: present
+            - tool: logdna
+              state: absent
+            - spectrum:
+              state: absent
+            - github:
+              state: absent
+        - role: PES Lead cloud engineer
+          state: present
+        - role: RwSAP cio functional group
+          state: present
